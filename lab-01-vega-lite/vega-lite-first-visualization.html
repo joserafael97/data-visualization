@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <h1>Template for Embedding Vega-Lite Visualization</h1>
+    <h1>Média de temperatura máxima ao longo dos meses</h1>
     <!-- Container for the visualization -->
     <div id="vis"></div>
 
@@ -11717,19 +11717,40 @@
                     }
                 ]
             },
-            "mark": "line",
-            "encoding": {
-                "x": {
-                    "timeUnit": "month",
-                    "field": "date",
-                    "type": "temporal"
+            "layer": [
+                {
+                    "encoding": {
+                        "x": {
+                            "timeUnit": "month",
+                            "field": "date",
+                            "type": "temporal"
+                        },
+                        "y": {
+                            "aggregate": "mean",
+                            "field": "temp_max",
+                            "type": "quantitative"
+                        }
+                    },
+                    "mark": "line",
+                    "config": {"mark": {"color": "#1f77b4"}}
                 },
-                "y": {
-                    "aggregate": "mean",
-                    "field": "precipitation",
-                    "type": "quantitative"
+                {
+                    "encoding": {
+                        "x": {
+                            "timeUnit": "month",
+                            "field": "date",
+                            "type": "temporal"
+                        },
+                        "y": {
+                            "aggregate": "mean",
+                            "field": "temp_max",
+                            "type": "quantitative"
+                        }
+                    },
+                    "mark": "point",
+                    "config": {"mark": {"color": "#ff7f0e"}}
                 }
-            }
+            ]
         };
 
         // Embed the visualization in the container with id `vis`
