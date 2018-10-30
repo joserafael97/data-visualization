@@ -1,4 +1,4 @@
-"","name","year","iso_a3","local_price","dollar_price","lat","long"
+"","name","year","id","local_price","dollar_price","lat","long"
 "1","Argentina","2000","ARG",2.5,2.5,-34,-64
 "2","Argentina","2001","ARG",2.5,2.5,-34,-64
 "3","Argentina","2002","ARG",2.5,0.798722044728435,-34,-64
